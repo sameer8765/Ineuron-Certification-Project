@@ -1,0 +1,51 @@
+Excel Assignment - 9
+
+1. What are the different margins options and do we adjust the margins of the excel worksheet?
+
+ans. Margins in Excel refer to the blank spaces around the edges of a printed page. They define how much space is 
+     left between the contents of the worksheet and the edges of the paper when you print it.
+	 Different margin options are:
+	 * Normal: This is the default margin setting, providing a moderate amount of space around the content.
+     * Wide: It increases the margin size, allowing more blank space around the content.
+     * Narrow: It reduces the margin size, resulting in less blank space around the content.
+     * Custom Margins: This option lets you manually set specific margin sizes for the top, bottom, left, and right edges.
+
+2. Set a background for your table created.
+
+ans. * Select the cells containing the table or click on the table to select it.
+     * Go to the "Home" tab on the Excel ribbon.
+     * Click on the "Fill Color" button (paint bucket icon) in the "Font" group.
+     * Choose a color from the palette or click on "More Colors" to select a custom color.
+	 * The selected cells or table will now have the chosen color as the background.
+
+
+3. What is freeze panes and why do we use freeze panes? Give examples.
+
+ans. Freeze Panes in Excel allows you to keep specific rows and/or columns visible on the screen while scrolling through a large worksheet.
+     This feature is useful when you have a lot of data and you want to keep headers or labels in sight, even when you scroll down or across the sheet. 
+
+
+4. What are the different features available within the Freeze Panes command?
+
+ans. The different features available within the Freeze Panes command are:
+
+     * Freeze Panes: This option freezes both rows and columns based on the selected cell, keeping them visible while scrolling.
+     * Freeze Top Row: This option freezes the top row only, so it remains visible while scrolling vertically.
+     * Freeze First Column: This option freezes the leftmost column only, so it remains visible while scrolling horizontally.
+
+
+5. Explain what the different sheet options present in excel are and what they do?
+
+ans. In Excel, the different sheet options include:
+
+     * Rename: This option allows you to change the name of the current sheet. 	 
+     * Move or Copy: This option lets you move or make a copy of the current sheet within the same workbook or to another open workbook.
+     * Change Color: You can assign different colors to sheet tabs to help organize and differentiate between sheets.
+     * Hide or Unhide: You can hide sheets to keep them from view without deleting them.
+     * Insert: This allows you to insert new sheets into the workbook.
+     * Delete: This option lets you delete the current sheet.
+     * Protect Sheet: You can protect a sheet with a password to prevent unauthorized changes to its contents and structure.
+     * Tab Color: This option allows you to change the color of the sheet tab.
+     * Tab Position: You can use this to move the sheet tab to a different position within the workbook.
+     * Select All Sheets: This option selects all sheets in the workbook at once, allowing you to apply changes to multiple sheets simultaneously.
+     * New Sheet: Clicking this will create a new blank sheet within the workbook.
