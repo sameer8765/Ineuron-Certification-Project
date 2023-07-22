@@ -1,0 +1,97 @@
+Excel Assignment - 6
+
+1. What are the various elements of the Excel interface? Describe how
+they're used.
+
+ans. * Ribbon: The ribbon is the top horizontal bar in Excel that contains tabs,
+       each representing a specific set of tools and commands.
+
+     * Worksheet: The main working area where we can input and manipulate data.
+
+     * Columns and Rows: Columns are vertical sections identified by letters (A, B, C, etc.),
+       while rows are horizontal sections identified by numbers (1, 2, 3, etc.).
+
+     * Cells: The individual rectangular boxes formed by the intersections of rows and columns.
+
+     * Formula Bar: the formula bar displays the contents of the active cell, 
+	   allowing you to view and edit cell contents, including formulas.
+
+     * Quick Access Toolbar: A customizable toolbar that allows you to add frequently used 
+	   commands for easy access.
+
+     * Sheet Tabs: Tabs at the bottom of the workbook window that allow you to switch between 
+	   different worksheets within the same workbook.
+
+2. Write down the various applications of Excel in the industry.
+
+ans. * Financial Analysis: Excel is widely used for financial budgeting, forecasting, and analyzing 
+       financial data.
+
+     * Data Analysis: Businesses use excel to analyze large datasets, create reports, and perform 
+	   statistical analyses.
+
+     * Project Management: Excel is used for project planning, scheduling, tracking, and
+       resource management.
+
+     * Sales and Marketing: For sales tracking, customer data management, marketing campaign analysis, 
+	   and lead generation.
+
+     * Human Resources: HR departments use Excel for employee data management, payroll processing 
+	   and performance tracking.
+
+     * Inventory Management: Excel helps in inventory tracking, stock management, and order processing.
+
+     * Data Visualization: Excel's charts and graphs are used to visualize data for presentations and reports.
+
+3. On the ribbon, make a new tab. Add some different groups, insert
+commands in the groups and name them according to their commands
+added. Copy and paste the screenshot of the steps you followed.
+
+ans. * Step 1: Right-click on the ribbon, and from the context menu, choose "Customize the Ribbon."
+
+     * Step 2: In the Excel Options window that appears, click on the "New Tab" button to create a new tab on the ribbon.
+
+     * Step 3: With the new tab selected, click on the "New Group" button to create a new group within the tab.
+
+     * Step 4: Select the commands we want to add to the group from the left panel, then click the "Add" button to move them to the new group.
+
+     * Step 5: Click "OK" to save our changes and see the new tab with the added groups and commands.
+
+
+4. Make a list of different shortcut keys that are only connected to
+formatting with their functions.
+
+ans. * Ctrl + B: Bold
+     * Ctrl + I: Italic
+     * Ctrl + U: Underline
+     * Ctrl + 1: Open the Format Cells dialog box
+     * Ctrl + Shift + $: Apply currency format
+     * Ctrl + Shift + %: Apply percentage format
+     * Ctrl + Shift + !: Apply number format with comma separator
+     * Ctrl + Shift + #: Apply date format with day, month, and year
+     * Ctrl + Shift + @: Apply time format with hours and minutes
+     * Ctrl + Shift + ^: Apply scientific number format
+     * Ctrl + Shift + ~: Apply general format
+
+
+5. What distinguishes Excel from other analytical tools?
+
+ans. Excel have very user friendly interface, that makes it accessible to wide range of users. It is also very easy to use.
+     Excel also provides a variety of charts and graphs which is helpful for data visualization. and comaparision to another 
+	 analytical tool excel is much more affordable than that tool.
+
+
+6. Create a table and add a custom header and footer to your table.
+
+ans. * Step 1: Enter your data into the worksheet.
+
+     * Step 2: Select the data range you want to convert into a table.
+
+     * Step 3: Then go to the "Insert" tab on the ribbon.
+
+     * Step 4: Click on the "Table" button in the Tables group. Excel will recognize the selected range and prompt
+       you to confirm the data range. Make sure the "My table has headers" option is checked if your data has headers.
+
+     * Step 5: Then click "OK".
+
+     * Step 6: For adding a custom header and footer to the table, go to the "Design" tab, which appears when the table is selected.
