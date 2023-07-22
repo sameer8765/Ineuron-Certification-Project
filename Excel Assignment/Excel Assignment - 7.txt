@@ -1,0 +1,76 @@
+Excel Assignment - 7
+
+1. Using Insert Function, give examples of any function available in the
+   different dropdowns present in the function library. For example
+   AutoSum, Recently Used, Text, Date & Time, etc.
+
+ans. * AutoSum Dropdown: 
+       some examples are,
+       Sum: Adds the values in a selected range.
+       Average: Calculates the average of the values in a selected range.
+       Count Numbers: Counts the number of cells in a selected range containing numbers.
+       Max: Returns the maximum value from a selected range.
+       Min: Returns the minimum value from a selected range.
+	   
+     * Recently Used: This category in the Function Library displays the functions we've used recently for quick access.
+
+     * All:
+	   some examples are,
+       IF: Returns one value if a condition is true and another value if it's false (Logical).
+       CONCATENATE: Joins two or more text strings into one (Text).
+       TODAY: Returns the current date (Date & Time).
+       PMT: Calculates the payment for a loan based on constant payments and a constant interest rate (Financial).
+
+
+2. What are the different ways you can select columns and rows?
+
+ans. * For selecting a whole column : Click on the column header letter (e.g. A, B, C) to select the entire column.
+     * Selecting Multiple Columns: Click and drag across multiple column headers or hold the "Shift" key while clicking 
+	   on column headers to select multiple columns.
+
+     * For selecting a whole Row: Click on the row number (e.g. 1, 2, 3) to select the entire row.
+
+     * Selecting Multiple Rows: Click and drag across multiple row numbers or hold the "Shift" key while 
+	   clicking on row numbers to select multiple rows.
+
+3. What is AutoFit and why do we use it?
+
+ans. AutoFit: AutoFit is a feature in Excel that automatically adjusts the width of a column or the height 
+     of a row to fit the content within it.
+	 It is used to ensure that all the data in a column or row is visible without any truncation or overflowing.
+	 It saves time by automatically adjusting the column width or row height to the optimal size based on the content.
+
+4. How can you insert new rows and columns into the existing table?
+
+ans. * To insert a new row: Right-click on the row header below where you want to insert the row, 
+       and from the context menu, select "Insert."
+	 * To insert a new column: Right-click on the column header to the right of where you want to 
+	   insert the column, and from the context menu, select "Insert." 
+
+
+5. How do you hide and unhide columns in excel?
+
+ans. * Hiding Columns: Select the column you want to hide, right-click on the selected column headers,
+       and from the context menu, choose "Hide.
+
+     * Unhiding Columns: To unhide columns, select the columns on either side of the hidden columns 
+	  (to include the hidden ones), right-click on the selected column headers, and choose "Unhide".
+
+6. Create an appropriate table within the worksheet and use different
+   functions available in the AutoSum command.
+
+ans. Let's suppose we have a simple table with numeric values in cells A1 to A5.
+     Step 1: Enter the data into cells A1 to A5.
+
+     Step 2: Click on cell A6 where we want the AutoSum results.
+
+     Step 3: Go to the "Home" tab on the ribbon.
+
+     Step 4: Click on the AutoSum dropdown arrow.
+
+     Step 5: Select the desired function from the dropdown, such as Sum, Average, Min, Max, etc. 
+	         Excel will automatically generate the formula and display the result in cell A6.
+
+     Step 6: If you want to use another AutoSum function, click on cell A7, repeat steps 4 and 5, and choose a different function.
+
+    
