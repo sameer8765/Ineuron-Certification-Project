@@ -1,0 +1,50 @@
+Advance Excel Assignment 5
+
+1. How many types of conditions are available in conditional formatting on Excel?
+
+ans. In Excel, there are three main types of conditions available in conditional formatting:
+     * Highlight Cells Rules: These allow you to apply formatting based on certain conditions,
+       such as greater than, less than, between, equal to, etc.
+     * Top/Bottom Rules: These let you format cells that are in the top or bottom 
+	   percentage/rank within a range.
+     * Data Bars, Color Scales, and Icon Sets: These options allow you to apply visual indicators
+       to the data based on their values, such as color gradients, data bars,icons etc.
+
+2. How to insert border in Excel with Format Cells dialog?
+
+ans. * Select the cells or range that you want to apply the border.
+     * Right-click on the selected cells and choose "Format Cells" to 
+	   open the Format Cells dialog then go to the "Border" tab.
+     * Choose the desired border style by clicking on the corresponding icons in the "Preview" section.
+       Then click "OK" to apply the selected border to the cells.
+	   
+3. How to Format Numbers as Currency in Excel?
+
+ans. Select the cells or range containing the numbers you want to format as currency.
+     * Go to the "Home" tab in the Excel ribbon.
+     * In the "Number" group, click on the drop-down arrow next to the "Number Format" box,
+       choose "Currency" from the list of number formats.
+
+4. What are the steps to format numbers in Excel with the Percent style?
+
+ans. Select the cells/range containing the numbers you want to format as percentages.
+     * Go to the "Home" tab in the Excel ribbon.
+     * In the "Number" group, click on the "%" button.
+       
+5. What is a shortcut to merge two or more cells in excel?
+
+ans. "Alt" + "H" followed by "M" or simply go to home's alignment box then in merge and center 
+     option then merge cells.
+	 
+6. How do you use text commands in Excel?
+
+ans. In excel there are various text functions, some of them are:
+     * CONCATENATE: Combines multiple text strings into one.
+     * LEN: Returns the number of characters in a text string.
+     * UPPER: Converts text to all uppercase letters.
+     * LOWER: Converts text to all lowercase letters.
+     * LEFT: Extracts a specified number of characters from the beginning of a text string.
+     * RIGHT: Extracts a specified number of characters from the end of a text string.
+     * FIND: Finds the position of one text string within another.
+     * SUBSTITUTE: Replaces occurrences of a specified text in a string with another text.
+     * TEXT: Converts a numeric value to text using a specified format.
