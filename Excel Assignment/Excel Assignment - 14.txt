@@ -1,0 +1,32 @@
+Excel Assignment - 14
+
+Dataset:
+
+https://docs.google.com/spreadsheets/d/1-Zo-
+A4gnlLOQxpU8qgpkTJPJCS8cQBmNzKVirJ_Ow0w/edit?usp=sharing
+
+Use the above dataset and answer the following questions. Assume that a gang is trying to loot Diamonds and Soft 
+drinks being exported from India
+
+1. How much Diamonds were looted from Chennai Port Trust?
+
+ans. 7182
+
+
+2. How many Ships were looted near Paradip Port Trust and Chennai Port Trust?
+
+ans. 6
+
+3. What is the sum total of Diamonds looted from the V.O. Chidambarnar port trust?
+
+ans. 9887
+
+
+4. What is the average amount of Diamonds and Soft drinks looted?
+
+ans. 1741.310345
+
+
+5. What is the ratio of soft drinks drunk to soft drinks looted?
+
+ans. 0.39201664
