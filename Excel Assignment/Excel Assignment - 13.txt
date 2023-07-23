@@ -1,0 +1,30 @@
+Excel Assignment - 13
+
+Dataset:
+https://docs.google.com/spreadsheets/d/1IRSEnmgz8Ro276-GslknRNk0zlrB5CZH1YrnT71kqFM/edit?usp=sharing
+
+Use the above dataset and answer the following questions.
+
+1. What is the total amount of stationary bought from Madhya Pradesh?
+
+ans. 176971
+
+
+2. What is the total count of stationary bought from Tamilnadu?
+
+ans. 13
+
+
+3. What is the total amount spent on footwear?
+
+ans. 194226
+
+
+4. What is the total amount of money spent for stationary in July?
+
+ans. 53398
+
+
+5. What is the count of footwear that is coming from Delhi?
+
+ans. 2
