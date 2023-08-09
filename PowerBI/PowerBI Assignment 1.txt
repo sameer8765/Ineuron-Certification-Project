@@ -1,0 +1,53 @@
+
+Power BI Assignment 1
+
+1> What do you mean by BI? Explain.
+
+ans. Business Intelligence (BI): Business Intelligence (BI) refers to the process of collecting, analyzing, and presenting business 
+     data to help organizations make informed decisions. It involves various tools, technologies, and practices that enable businesses
+	 to transform raw data into meaningful insights, aiding in strategic planning, performance evaluation, and operational improvements.
+
+2> How Power-BI helps in BI, and how does it help Analysts? Explain.
+
+ans. Power BI is a powerful business intelligence tool developed by Microsoft. It helps in BI by allowing analysts and 
+     decision-makers to connect to various data sources, transform and shape data, create interactive visualizations, and share
+	 insights across the organization. Power BI simplifies complex data analysis and visualization tasks, making it easier to uncover 
+	 patterns, trends, and relationships within the data.
+
+3> Explain Descriptive analytics?
+
+ans. Descriptive analytics involves analyzing historical data to gain insights into past performance and understand what
+     has happened. It focuses on summarizing and presenting data to provide a clear understanding of events, often using 
+	 charts, graphs, and reports.
+
+
+4> Explain Predictive analytics?
+
+ans. Predictive analytics uses historical data and statistical algorithms to make predictions about future outcomes.
+     By analyzing patterns and relationships in data, predictive analytics aims to forecast trends and behaviors.
+	 It helps organizations anticipate potential scenarios and make more informed decisions.
+
+
+5> Explain perspective analytics?
+
+ans. Prescriptive analytics goes beyond descriptive and predictive analytics. It not only explains what might happen in the future
+     but also suggests actions to take based on the predictions. This type of analytics helps businesses optimize decisions by providing
+	 recommendations for the best course of action.
+
+6> Write five real-life questions that PowerBi can solve.
+
+ans. * Sales Performance Analysis: How our sales perform over the past year. Which products or regions are driving the most revenue, 
+     and how do they compare to previous periods?
+
+     * Customer Segmentation: we identify distinct customer segments based on demographics, purchasing behavior, and preferences
+
+     * Inventory Optimization: we predict future demand for our products and adjust inventory levels accordingly to avoid stockouts or overstock situations
+
+     * Website Traffic Analysis: How many visitors are coming to our website. What pages are they visiting the most, and where do they drop off.
+	 
+     * Employee Performance Review: we track employee performance metrics like sales targets, customer feedback, and project completion rates.
+
+
+
+
+
