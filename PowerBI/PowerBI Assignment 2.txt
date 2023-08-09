@@ -1,0 +1,83 @@
+Power BI Assignment 2
+
+1> Explain the advantages of Natural Queries in PowerBi with an example?
+
+ans. Natural Queries, also known as Q&A (Question and Answer), allow users to ask questions about their data using natural 
+     language and get instant visualizations as results. This feature makes it easier for non-technical users to explore and
+	 analyze data without having to create complex queries or visuals. An example could be a user typing "show sales by product category 
+	 in a bar chart" in the Q&A box, and Power BI generating the requested visualization.
+
+2> Explain Web Front End(WFE) cluster from Power BI Service Architecture?
+
+ans. The Web Front End (WFE) cluster is a component of the Power BI Service architecture that handles user interactions and 
+     requests from the web browser. It manages authentication, session management, rendering dashboards, and handling user 
+	 interactions. It ensures a smooth and responsive user experience within the Power BI web interface.
+
+3> Explain Back End cluster from Power BI Service Architecture?
+
+ans. The Back End cluster is the part of the Power BI Service architecture responsible for data processing, data refresh, 
+     and managing datasets. It handles tasks like data transformation, compression, and storage. It also manages data refresh schedules
+	 and maintains the backend infrastructure required for handling the datasets.
+
+
+4> What ASP.NET component does in Power BI Service Architecture?
+
+ans. In the Power BI Service Architecture, the ASP.NET component is responsible for handling authentication, authorization, 
+     and other web-related functionalities. It helps secure access to Power BI content, manages user roles, and ensures proper
+	 authentication mechanisms for accessing reports, dashboards, and datasets.
+
+5> Compare Microsoft Excel and PowerBi Desktop on the following features:
+   Data import
+   Data transformation
+   Modeling
+   Reporting
+   Server Deployment
+   Convert Models
+   Cost
+   
+ans. * Data Import: Both Excel and Power BI Desktop can import data from various sources, 
+       but Power BI's data connectivity options are often more comprehensive and designed specifically for business intelligence scenarios.
+	   
+     * Data Transformation: Power BI Desktop offers more advanced data transformation capabilities, including Power Query, 
+	   which allows users to clean, reshape, and combine data from different sources. Excel also has data transformation features,
+ 	   but Power Query is more robust.
+ 
+     * Modeling: Power BI Desktop is designed for data modeling with features like relationships, measures, and calculated columns.
+       While Excel can create models, Power BI's modeling capabilities are more optimized for BI scenarios.
+	   
+     * Reporting: Both tools allow for creating reports, but Power BI's visualization options, interactive features, 
+	   and layout options are better suited for creating dynamic and interactive reports and dashboards.
+	   
+     * Server Deployment: Power BI reports can be published to the Power BI Service for easy sharing and collaboration, whereas Excel
+       files often require manual distribution and may not provide the same level of online collaboration.
+	   
+     * Convert Models: Power BI models can be more easily converted into reports and dashboards, with optimized visuals and interactions.
+       Excel models can be used for pivot tables and charts, but the transition to a full BI report might require more effort.
+	   
+     * Cost: Power BI Desktop is free to use, while advanced features and collaboration require a Power BI Pro or Premium license. 
+	   Excel is part of the Microsoft Office suite, but some advanced BI features may require additional licensing.
+
+6> List 20 data sources supported by Power Bi desktop.
+
+ans. * Excel Workbooks
+     * Snowflake
+     * SQL Server Databases
+     * Azure SQL Database
+     * Oracle Database
+     * SharePoint Lists
+     * Web Services (RESTful APIs)
+     * JSON Files
+     * CSV Files
+     * XML Files
+     * Access Databases
+     * Power BI Dataflows
+     * Google Analytics
+     * Salesforce
+     * Dynamics 365
+     * Hadoop HDFS
+     * Azure Data Lake Storage
+     * SharePoint Online
+     * MySQL Database
+     * Teradata Database
+     * Web Content (HTML)
+
