@@ -1,0 +1,65 @@
+POWERBI ASSIGNMENT 5
+
+1> Explain DAX.
+
+ANS. DAX is a formula language used in Power BI (and other Microsoft products like Excel) for creating custom 
+     calculations and aggregations in data models. DAX enables users to perform complex calculations and create calculated columns,
+	 measures, and tables. It's designed to work with tabular data models and is used to enhance analysis capabilities within Power BI
+
+2> Explain datasets, reports, and dashboards and how they relate to each other?
+
+ANS. * Datasets: Datasets in Power BI are collections of related tables and data that you import or connect to from various sources. 
+       Datasets serve as the foundation for creating visualizations and reports.
+    
+	 * Reports: Reports are interactive data visualizations created within Power BI Desktop or the Power BI Service. 
+	   It consist of visuals like charts, tables, and graphs that represent insights derived from the underlying dataset.
+	   
+     * Dashboards: Dashboards are collections of visuals, images, and text that provide a consolidated view of data from different
+    	 reports. Dashboards help users monitor key metrics and gain a high-level overview of business performance.
+
+3> How reports can be created in power BI, explain two ways with Navigation of each.
+
+ANS. * Power BI Desktop:
+
+        - Launch Power BI Desktop.
+        - Click on "Get Data" to import data from various sources.
+        - Design visuals by dragging and dropping fields onto the canvas.
+        - Add visuals, create relationships, and apply DAX calculations.
+        - Save the report, and it can be published to the Power BI Service.
+		
+    * Power BI Service:
+
+       - Sign in to Power BI Service.
+       - Click on "Create" and select "Report" to start a new report.
+       - Connect to a dataset or create a new dataset.
+       - Design visuals using the visualizations pane and drag fields onto the canvas.
+       - Customize visuals, add filters, and create interactions.
+       - Save the report within the Power BI Service.
+
+
+4> How to connect to data in Power BI? How to use the content pack to connect to google analytics? Mention the steps.
+
+ANS. * To use a content pack to connect to Google Analytics:
+       - Open Power BI Desktop.
+       - Click on "Get Data" > "Services."
+       - Select "Google Analytics" from the available services.
+       - Authenticate with your Google Analytics account and choose the desired view.
+       - Configure data loading options and load the data into Power BI.
+
+5> How to import Local files in Power BI? Mention the Steps.
+
+ANS. * To import local files like Excel or CSV:
+       - Open Power BI Desktop.
+       - Click on "Get Data" > "File."
+       - Select the file type (e.g., Excel, CSV) and locate the file.
+       - Choose the specific tables or sheets to import.
+       - Apply transformations if needed and load the data.
+
+
+6> In Power BI visualization, what are Reading View and Editing view?
+
+ANS. * Reading View: In Reading View, viewers of the report can interact with visuals, apply filters, and explore data without making 
+       changes to the report layout. It's a mode for consuming insights and exploring visualizations.
+	   
+     * Editing View: In Editing View, report authors or creators can modify the report layout, visuals, filters, and data connections. 
+	   It's the mode where changes to the report's design and content are made
