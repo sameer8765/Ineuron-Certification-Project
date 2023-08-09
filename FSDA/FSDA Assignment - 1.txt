@@ -1,0 +1,223 @@
+ASSIGNMENT - 1
+
+create database assignment;
+use assignment;
+
+-- TASK 1
+create table shopping_history( product varchar(25) not null,
+                               quantity integer not null,
+                               unit_price integer not null );
+                               
+insert into shopping_history values( 'milk', 3,10),
+								   ('bread',7,3),
+                                   ('bread',5,2);
+                                   
+select * from shopping_history;
+
+select 
+      product, sum(quantity*unit_price) as total_price
+from shopping_history
+group by product
+order by product desc;
+
+-- TASK 2
+
+--- 1>
+create table phones(name varchar(20) not null unique,
+                    phone_number integer not null unique);
+                    
+create table cells(id integer not null,
+                    caller integer not null,
+                    callee integer not null,
+                    duration integer not null,
+                    unique(id));
+                    
+insert into phones values('jack',1234),
+                          ('lena',3333),
+                          ('mark',9999),
+                          ('anna',7582);
+                          
+insert into cells values(25,1234,7582,8),
+                        (7,9999,7582,1),
+                        (18,9999,3333,4),
+                        (2,7582,3333,3),
+                        (3,3333,1234,1),
+                        (21,3333,1234,1);
+with combined_cte as
+(select name, caller, total_talk_time
+from phones p inner join 
+(select caller, sum(talk_time) as total_talk_time
+from
+(select 
+     caller, sum(duration) as talk_time
+from cells 
+group by caller
+union all
+select 
+     callee, sum(duration) as talk_time
+from cells 
+group by callee) a
+group by caller) b 
+ on p.phone_number = b.caller)
+ 
+ select name from combined_cte
+ where total_talk_time >=10
+ order by name;
+                          
+--- 2>
+
+create table phones_number(name varchar(20) not null unique,
+                    phone_number integer not null unique);
+                    
+create table cells_number(id integer not null,
+                    caller integer not null,
+                    callee integer not null,
+                    duration integer not null,
+                    unique(id));
+                    
+insert into phones_number values('John',6356),
+                          ('Addison',4315),
+                          ('Kate',8003),
+                          ('Ginny',9831);
+                          
+insert into cells_number values(65,8003,9831,7),
+                        (100,9831,8003,3),
+                        (145,4315,9831,18)
+                        ;
+with combined_cte as
+(select name, caller, total_talk_time
+from phones_number p inner join 
+(select caller, sum(talk_time) as total_talk_time
+from
+(select 
+     caller, sum(duration) as talk_time
+from cells_number
+group by caller
+union all
+select 
+     callee, sum(duration) as talk_time
+from cells_number 
+group by callee) a
+group by caller) b 
+ on p.phone_number = b.caller)
+ 
+ select name from combined_cte
+ where total_talk_time >=10
+ order by name;
+ 
+ --- TASK 3
+ 
+ --- 1> 
+ 
+ create table transactions(amount integer not null,
+                           date date not null);
+                           
+insert into transactions values (1000, '2020-01-06');
+insert into transactions values (-10, '2020-01-14'),
+								(-75, '2020-01-20'),
+                                (-5, '2020-01-25'),
+                                (-4, '2020-01-29'),
+                                (2000, '2020-03-10'),
+                                (-75, '2020-03-12'),
+                                (-20, '2020-03-15'),
+                                (40, '2020-03-15'),
+                                (-50, '2020-03-17'),
+                                (200, '2020-10-10'),
+                                (-200, '2020-10-10');
+create table transactions_month as                                
+select 
+      date, extract(month from date) as months, amount
+from transactions;
+
+with credit_trnx_cte as
+(select 
+     months, count(*) as transaction_number, sum(amount) as total_amount
+from transactions_month
+where amount < 0
+group by months),
+
+cte2 as
+(select count(*) as total_deduct_no from credit_trnx_cte
+where transaction_number >=3 and total_amount <= -100)
+
+select sum(amount) - (12-(select * from cte2))*5 as balance
+from transactions;
+
+--- 2
+
+create table transactions2(amount integer not null,
+                           date date not null);
+                           
+insert into transactions2 values (1, '2020-06-29');
+insert into transactions2 values (35, '2020-02-20'),
+								(-50, '2020-02-03'),
+                                (-1, '2020-02-26'),
+                                (-200, '2020-08-01'),
+                                (-44, '2020-02-07'),
+                                (-5, '2020-02-25'),
+                                (1, '2020-06-29'),
+                                (1, '2020-06-29'),
+                                (-100, '2020-12-29'),
+                                (-100, '2020-12-30'),
+                                (-100, '2020-12-31');
+                                
+create table transactions_months as                                
+select 
+      date, extract(month from date) as months, amount
+from transactions2;
+
+with credit_trnx_cte as
+(select 
+     months, count(*) as transaction_number, sum(amount) as total_amount
+from transactions_months
+where amount < 0
+group by months),
+
+cte2 as
+(select count(*) as total_deduct_no from credit_trnx_cte
+where transaction_number >=3 and total_amount <= -100)
+
+select sum(amount) - (12-(select * from cte2))*5 as balance
+from transactions2;
+
+--- 3> 
+
+create table transactions3(amount integer not null,
+                           date date not null);
+                           
+insert into transactions3 values (6000, '2020-04-03');
+insert into transactions3 values (5000, '2020-04-02'),
+								(4000, '2020-04-01'),
+                                (3000, '2020-03-01'),
+                                (2000, '2020-02-01'),
+                                (1000, '2020-01-01')
+                               ;
+                                
+create table transactions_months3 as                                
+select 
+      date, extract(month from date) as months, amount
+from transactions3;
+
+with credit_trnx_cte as
+(select 
+     months, count(*) as transaction_number, sum(amount) as total_amount
+from transactions_months3
+where amount < 0
+group by months),
+
+cte2 as
+(select count(*) as total_deduct_no from credit_trnx_cte
+where transaction_number >=3 and total_amount <= -100)
+
+select sum(amount) - (12-(select * from cte2))*5 as balance
+from transactions3;
+
+
+
+
+
+
+
+
+
+
