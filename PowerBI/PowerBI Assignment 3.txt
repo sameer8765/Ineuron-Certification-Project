@@ -1,0 +1,61 @@
+Power BI Assignment 3
+
+1> List and explain different PowerBi products?
+
+ans. * Power BI Desktop: This is a Windows application for creating interactive reports and data visualizations.
+       It allows you to connect to various data sources, transform data, build data models, and design reports and dashboards.
+	   
+     * Power BI Service (Power BI Online): This is the cloud-based platform for sharing, collaborating on, and publishing Power BI 
+	   reports and dashboards. It allows users to access reports via a web browser and provides features like data refresh, sharing, and collaboration.
+	   	   
+     * Power BI Mobile: A mobile app available for iOS and Android devices, allowing users to access Power BI reports and dashboards on the go.
+	 
+     * Power BI Report Server: This is an on-premises solution that enables organizations to host and share Power BI reports within their own network.
+	 
+     * Power BI Embedded: This allows developers to embed Power BI reports and visuals into their own applications, websites, or portals.
+	 
+     * Power BI Premium: A higher-tier offering that provides dedicated cloud capacity for better performance, larger dataset sizes,
+       and advanced features like paginated reports and AI capabilities.
+
+2> What limitations of Excel, Microsoft solved by PowerBi?
+
+ans. * Scalability: Power BI can handle larger datasets and provide faster performance compared to Excel, especially for 
+       complex data modeling and visualization.
+	   
+     * Data Source Variety: Power BI offers a wide range of connectors to various data sources, including cloud-based and on-premises databases,
+    	 which Excel may not handle as effectively.
+		 
+     * Interactive Visualizations: Power BI provides a more dynamic and interactive visualization experience, allowing users 
+	   to explore data and create interactive dashboards easily.
+	   
+     * Sharing and Collaboration: Power BI's cloud-based platform enables easy sharing and collaboration on reports and dashboards, which can
+    	 be challenging with Excel files.
+		 
+     * Real-time Data: Power BI can connect to real-time data sources and refresh data automatically, providing up-to-date insights without manual effort.
+
+3> Explain PowerQuery?
+
+ans. Power Query is a data transformation and preparation tool integrated into Power BI and other Microsoft products. 
+     It allows users to connect to various data sources, clean, reshape, and transform data using a user-friendly interface.
+	 Power Query helps automate data cleansing tasks and ensures data is prepared for analysis.
+
+
+4> Explain PowerMap?
+
+ans. Power Map, now known as 3D Maps in Excel, is a tool that enables users to visualize geographical and spatial data on a
+     3D map. It allows you to plot data points on a map, create animations, and explore data patterns in a geographic context.
+
+
+5> How powerBi eliminated the need to host SharePoint Server on premises?
+
+ans. Power BI's cloud-based platform (Power BI Service) provides a scalable and secure environment for hosting and sharing reports and dashboards.
+    This eliminates the need to maintain and host an on-premises SharePoint Server solely for sharing and collaborating on reports. 
+	Power BI Service offers features such as data refresh, sharing with external users, and seamless collaboration without the need for 
+	maintaining complex server infrastructure.
+
+
+6> Explain the updates done in Power Bi Service(power BI 2.0) as compared to older version ?
+
+ans. Power BI undergoes continuous updates and improvements. However, some general improvements over time include 
+     enhanced data visualization options, improved data connectivity, AI-driven features, better integration with other Microsoft tools, 
+	 enhanced sharing and collaboration capabilities, and the introduction of new visuals, such as paginated reports and decomposition trees.
