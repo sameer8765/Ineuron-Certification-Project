@@ -1,0 +1,114 @@
+Excel Assignment - 20
+
+1. Write a VBA code to select the cells from A5 to C10. Give it a name “Data Analytics” and fill the cells with the following cells “This is Excel
+   VBA”
+   
+   Number Odd or even
+
+    56
+    89
+    26
+    36
+    75
+    48
+    92
+    58
+    13
+    25
+
+ans. Sub FillAndNameCells()
+    Range("A5:C10").Select
+    Selection.Name = "Data_Analytics"
+    Selection.Value = "This is Excel VBA"
+    Selection.Offset(0, 3).Value = "Number Odd or Even"
+    Selection.Offset(1, 3).Value = "56"
+    Selection.Offset(2, 3).Value = "89"
+    Selection.Offset(3, 3).Value = "26"
+    Selection.Offset(4, 3).Value = "36"
+    Selection.Offset(5, 3).Value = "75"
+    Selection.Offset(6, 3).Value = "48"
+    Selection.Offset(7, 3).Value = "92"
+    Selection.Offset(8, 3).Value = "58"
+    Selection.Offset(9, 3).Value = "13"
+    Selection.Offset(10, 3).Value = "25"
+End Sub
+
+
+
+2. Use the above data and write a VBA code using the following statements to display in the next column if the number is odd or even
+
+   a. IF ELSE statement
+   
+   ans. Sub CheckOddEven_IFELSE()
+           Dim cell As Range
+           For Each cell In Range("D6:D15")
+               If cell.Value Mod 2 = 0 Then
+                  cell.Offset(0, 1).Value = "Even"
+               Else
+                  cell.Offset(0, 1).Value = "Odd"
+               End If
+           Next cell
+        End Sub
+ 
+   
+   b. Select Case statement
+   
+   ans.  Sub CheckOddEven_SelectCase()
+             Dim cell As Range
+             For Each cell In Range("D6:D15")
+                 Select Case cell.Value Mod 2
+                    Case 0
+                        cell.Offset(0, 1).Value = "Even"
+                    Case 1
+                        cell.Offset(0, 1).Value = "Odd"
+                 End Select
+             Next cell
+         End Sub
+
+   
+   c. For Next Statement
+   
+   ans. Sub CheckOddEven_ForLoop()
+          Dim cell As Range
+          For Each cell In Range("D6:D15")
+             If cell.Value Mod 2 = 0 Then
+                cell.Offset(0, 1).Value = "Even"
+             Else
+                cell.Offset(0, 1).Value = "Odd"
+             End If
+          Next cell
+        End Sub
+
+   
+
+3. What are the types of errors that you usually see in VBA?
+
+ans. * Syntax Errors: Mistakes in code structure and formatting.
+     * Runtime Errors: Errors that occur while code is executing.
+     * Logical Errors: Code runs but produces unexpected results.
+
+
+4. How do you handle Runtime errors in VBA?
+
+ans. * Use error handling techniques like On Error Resume Next, On Error GoTo, or On Error GoTo 0.
+     * Use Err object to capture error information.
+     * Implement proper error messages and logging.
+
+
+5. Write some good practices to be followed by VBA users for handling errors
+
+ans. * Use error handling to gracefully handle unexpected situations.
+     * Display user-friendly error messages.
+     * Implement logging to track errors and troubleshoot.
+     * Validate inputs before performing operations.
+     * Break code into smaller procedures for better error isolation.
+
+
+6. What is UDF? Why are UDF’s used? Create a UDF to multiply 2 numbers in VBA
+
+ans.  UDFs allow you to create custom functions in Excel using VBA. They can perform calculations and return values like built-in functions.
+      Creating a UDF to multiply two numbers:
+	  
+	  Function MultiplyNumbers(ByVal num1 As Double, ByVal num2 As Double) As Double
+         MultiplyNumbers = num1 * num2
+      End Function
