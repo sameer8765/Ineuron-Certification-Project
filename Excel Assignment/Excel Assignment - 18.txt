@@ -1,0 +1,66 @@
+Excel Assignment - 18
+
+1. What are comments and what is the importance if commenting in any code?
+
+ans.  Comments and Their Importance:
+
+      Comments: Comments in code are non-executable text that provide explanations, notes, or context about the code's purpose or functionality.
+	  
+      * Importance of Commenting: Commenting is crucial for several reasons:
+      * Clarity: Comments help other programmers (or your future self) understand your code.
+      * Documentation: They serve as documentation, making it easier to maintain and troubleshoot code.
+      * Collaboration: Comments aid collaboration by making it clear what different parts of the code do.
+      * Debugging: Clear comments can help identify issues and locate the source of errors.
+      * Learning: Comments help beginners learn from your code and understand programming concepts.
+
+
+2. What is Call Statement and when do you use this statement?
+
+ans. The Call statement is used to invoke a Sub Procedure or a Function Procedure.
+     While the Call statement can be used, it's more common to invoke procedures without it.
+     Usage: Call ProcedureName(Arguments)
+
+
+3. How do you compile a code in VBA? What are some of the problem that you might face when you don’t compile a code?
+
+ans. To compile VBA code, go to the VBA Editor (Alt + F11), and then click "Debug" > "Compile VBAProject."
+     Problems when not compiling code:
+        * Syntax Errors: Unclosed statements or wrong syntax can lead to runtime errors.
+        * Undeclared Variables: Variables might not be properly declared.
+        * Logic Errors: Bugs might arise due to incorrect logic or order of operations.
+
+
+4. What are hot keys in VBA? How can you create your own hot keys?
+
+ans.   Hot Keys: These are keyboard shortcuts that trigger specific actions in the VBA Editor.
+       Creating Custom Hot Keys: You can create custom hot keys using Excel's "Customize Keyboard" dialog in the VBA Editor's 
+	   "Tools" menu. This allows you to assign macros to specific key combinations.
+
+
+5. Create a macro and shortcut key to find the square root of the following
+   numbers 665, 89, 72, 86, 48, 32, 569, 7521
+   
+ans. Sub CalculateSquareRoots()
+         Dim Numbers As Variant
+         Dim i As Long
+    
+         Numbers = Array(665, 89, 72, 86, 48, 32, 569, 7521)
+    
+         For i = LBound(Numbers) To UBound(Numbers)
+              MsgBox "Square root of " & Numbers(i) & " is " & Sqr(Numbers(i))
+         Next i
+     End Sub
+
+
+
+6. What are the shortcut keys used to
+
+   a. Run the code 
+   b. Step into the code 
+   c. Step out of code 
+   d. Reset the code 
+   
+ans. * Run Code: F5 or Ctrl + R
+     * Step Into Code: F8
+     * Step Out of Code: Shift + F8
+     * Reset Code: Ctrl + Break (this stops code execution)
