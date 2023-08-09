@@ -1,0 +1,150 @@
+Excel Assignment - 21
+
+1. Write a VBA code to enter your name in A1 Cell using Input Box and once you enter the name display a message box that says the name
+   has been entered.
+   
+ans. Sub EnterNameAndDisplayMessage()
+       Dim userName As String
+       userName = InputBox("Enter your name:", "Name Entry")
+       Range("A1").Value = userName
+       MsgBox "Name has been entered: " & userName
+     End Sub
+
+
+
+2. What are Userforms? Why are they used? How to fill a list box using for loop.
+
+ans. * Userforms: Userforms are custom dialog boxes in Excel created using VBA. They allow you to create interactive interfaces for users
+       to input data or make selections.
+     * Usage: Userforms are used to gather user input, display information, or perform actions based on user interactions.
+     * Filling List Box Using For Loop:
+       Assuming you have a userform named "UserForm1" and a list box named "ListBox1":
+	   
+	   Private Sub UserForm_Initialize()
+         Dim i As Long
+         For i = 1 To 10
+            ListBox1.AddItem "Item " & i
+         Next i
+       End Sub
+
+
+3. What is an array? Write a VBA code to enter students and their marks from the below table.
+
+ans. * Array: An array is a collection of values of the same data type, stored under a single variable name.
+     * Advantages: Arrays allow efficient storage and manipulation of multiple values.
+     * VBA Code to Enter Students and Marks:
+       Assuming you want to enter student names and their marks into columns A and B:
+	   
+	   Sub EnterStudentsAndMarks()
+         Dim studentData() As Variant
+         Dim i As Long
+    
+         ' Prepare data array
+         studentData = Array(Array("Student1", 85), _
+                        Array("Student2", 92), _
+                        Array("Student3", 78), _
+                        Array("Student4", 95), _
+                        Array("Student5", 64))
+    
+        ' Enter data in worksheet
+        For i = LBound(studentData) To UBound(studentData)
+            Range("A" & i + 1).Value = studentData(i)(0) ' Student Name
+            Range("B" & i + 1).Value = studentData(i)(1) ' Marks
+        Next i
+      End Sub
+
+
+4. Use the following data to create a pie chart using VBA code. Use Font - ‘Times new Roman’, Size -14, Bold, Title - Piechart’ and you are per
+   to use colours as per your taste.
+   
+ans. Sub CreatePieChart()
+       Dim ws As Worksheet
+       Dim chtObj As ChartObject
+       Dim chtData As Range
+       Dim chtTitle As String
+    
+       ' Set the worksheet where you want to create the chart
+       Set ws = ThisWorkbook.Sheets("Excel Assignment Dataset")
+    
+       ' Set the range containing the chart data
+       Set chtData = ws.Range("A1:A5")
+    
+      ' Set the chart title
+      chtTitle = "Pie Chart"
+    
+      ' Add a new chart to the worksheet
+      Set chtObj = ws.ChartObjects.Add(Left:=100, Width:=375, Top:=75, Height:=225)
+    
+      ' Set chart font settings
+      chtObj.Chart.HasTitle = True
+      chtObj.Chart.ChartTitle.Text = chtTitle
+      chtObj.Chart.ChartTitle.Font.Name = "Times New Roman"
+      chtObj.Chart.ChartTitle.Font.Size = 14
+      chtObj.Chart.ChartTitle.Font.Bold = True
+    
+     ' Create the pie chart
+     With chtObj.Chart
+        .SetSourceData Source:=chtData
+        .ChartType = xlPie
+        .ApplyDataLabels ShowPercent:=True
+    End With
+End Sub
+
+
+5. Check the dataset in the link given below and create a pivot table using VBA showing the sales for the year from stationary category.
+   https://docs.google.com/spreadsheets/d/1IRSEnmgz8Ro276- GslknRNk0zlrB5CZH1YrnT71kqFM/edit?usp=sharing
+   
+ans. Sub CreatePivotTable()
+       Dim ws As Worksheet
+       Dim dataRange As Range
+       Dim pivotTableRange As Range
+       Dim pivotTable As PivotTable
+       Dim pivotCache As PivotCache
+       Dim pivotTableDestination As Range
+       Dim field As PivotField
+    
+      ' Set the worksheet where your data is located
+      Set ws = ThisWorkbook.Sheets("Excel Assignment Dataset") 
+    
+      ' Set the data range (adjust this to your actual data range)
+      Set dataRange = ws.Range("A1:D100") 
+    
+      ' Create a pivot table cache
+      Set pivotCache = ThisWorkbook.PivotCaches.Create(SourceType:=xlDatabase, SourceData:=dataRange)
+    
+      ' Set the pivot table range (the range where the pivot table will be placed)
+      Set pivotTableDestination = ws.Range("F2") 
+    
+      ' Add the pivot table to the worksheet
+      Set pivotTable = pivotCache.CreatePivotTable(TableDestination:=pivotTableDestination, TableName:="SalesPivotTable")
+    
+      ' Set the pivot fields
+      Set field = pivotTable.PivotFields("Category") 
+      field.Orientation = xlRowField
+    
+      Set field = pivotTable.PivotFields("Date") 
+      field.Orientation = xlColumnField
+    
+      Set field = pivotTable.PivotFields("Amount") ' Replace with your sales field name
+      field.Orientation = xlDataField
+      field.Function = xlSum
+    
+      ' Filter for the stationary category
+      pivotTable.PivotFields("Category").CurrentPage = "Stationary"    
+    End Sub
+
+
+6. Write step by step procedure to protect your workbook using a password.
+
+ans. 
+     * Click on the "File" Menu:
+     * Click on the "File" menu located in the top-left corner of the Excel window.
+     * In the "File" menu, select the "Info" option from the left sidebar. 
+     * Under the "Info" section, you'll find a "Protect Workbook" dropdown. Click on it to reveal a menu of protection options.
+     * From the dropdown menu, choose the "Encrypt with Password" option.
+     * In the "Encrypt Document" dialog box, enter a password of your choice.
+     * After entering the password, you'll be asked to confirm it by entering it again in the "Reenter password to proceed" field.
+     * click the "OK" button. Excel will encrypt the workbook with the provided password.
+     * After setting the password, make sure to save your workbook again to apply the encryption.
+     
+
