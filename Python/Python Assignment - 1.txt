@@ -1,0 +1,63 @@
+PYTHON ASSIGNMENT - 1
+
+1. In the below elements which of them are values or an expression? eg:- values can be
+integer or string and expressions will be mathematical operators.
+
+* - Expression
+'hello' - value
+-87.8 - value
+- Expression
+/ Expression
++ Expression
+6 - value
+
+2. What is the difference between string and variable?
+
+ans.  * A string is a sequence of characters enclosed in single (' ') or double (" ") quotes, used to represent textual data.
+      * A variable is a name that refers to a value stored in memory. It can hold various types of data, including strings, numbers, and more
+
+3. Describe three different data types.
+
+ans. * Integer: Represents whole numbers, like 5 or -12.
+     * Float: Represents decimal numbers, like 3.14 or -0.5.
+     * String: Represents text, enclosed in quotes, like 'hello' or "world".
+
+4. What is an expression made up of? What do all expressions do?
+
+ans. An expression is a combination of values, variables, and operators that can be evaluated to produce a value. 
+     Expressions can represent calculations or transformations of data.
+
+5. This assignment statements, like spam = 10. What is the difference between an
+expression and a statement?
+
+ans. * An expression produces a value when it's evaluated. Examples include mathematical calculations or string concatenations.
+     * A statement performs an action or an operation. Examples include assignments, loops, and function calls.
+
+6. After running the following code, what does the variable bacon contain?
+bacon = 22
+bacon + 1
+
+ans. The variable bacon contains the value 23.
+
+7. What should the values of the following two terms be?
+'spam' + 'spamspam'
+'spam' * 3
+
+ans. 'spam' + 'spamspam' - Result: 'spamspamspam'
+     'spam' * 3          - Result: 'spamspamspam'
+
+8. Why is eggs a valid variable name while 100 is invalid?
+
+ans. Variable names cannot start with a digit. So, eggs is a valid variable name, but 100 starts with a digit and is thus invalid.
+
+9. What three functions can be used to get the integer, floating-point number, or string
+version of a value?
+
+ans. * int(): Used to convert a value to an integer.
+     * float(): Used to convert a value to a floating-point number.
+     * str(): Used to convert a value to a string.
+
+10. Why does this expression cause an error? How can you fix it?
+'I have eaten' + 99 +  'burritos'
+
+ans. 'I have eaten ' + str(99) + ' burritos'

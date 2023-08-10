@@ -1,0 +1,41 @@
+PYTHON ASSIGNMENT - 5
+
+1. What does an empty dictionarys code look like?
+
+ans. An empty dictionary's code is {}.
+
+2. What is the value of a dictionary value with the key 'foo' and the value 42?
+
+ans. The value of a dictionary value with the key 'foo' and the value 42 would be 42
+
+3. What is the most significant distinction between a dictionary and a list?
+
+ans. The most significant distinction between a dictionary and a list is that a dictionary stores data in key-value pairs, 
+     while a list stores data in a sequence of ordered elements.
+
+4. What happens if you try to access spam['foo'] if spam is {'bar': 100}?
+
+ans. If you try to access spam['foo'] and spam is {'bar': 100}, you will get a KeyError because the key 'foo' doesn't exist in the dictionary.
+
+5. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.keys()?
+
+ans. If a dictionary is stored in spam, the expression 'cat' in spam checks if the key 'cat' is present in the dictionary. 
+     The expression 'cat' in spam.keys() also checks for the presence of the key 'cat' in the dictionary. Both expressions are equivalent.
+
+6. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.values()?
+
+ans. If a dictionary is stored in spam, the expression 'cat' in spam checks if the value 'cat' is present in any of the dictionary's values. 
+     The expression 'cat' in spam.values() checks for the presence of the value 'cat' in the dictionary's values.
+
+7. What is a shortcut for the following code?
+   if 'color' not in spam:
+   spam['color'] = 'black'
+
+ans. spam.setdefault('color', 'black')
+
+
+8. How do you "pretty print" dictionary values using which module and function?
+
+ans.  To "pretty print" dictionary values, you can use the pprint module's pprint() function. 
+      First, you need to import the module with import pprint, and then you can use pprint.pprint(your_dictionary)
+	  to print the dictionary in a more readable format.
