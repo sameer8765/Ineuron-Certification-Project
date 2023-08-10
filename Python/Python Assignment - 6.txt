@@ -1,0 +1,59 @@
+PYTHON ASSIGNMENT - 6
+
+1. What are escape characters, and how do you use them?
+
+ans. Escape characters are special characters that are used to represent certain actions or non-printable characters within strings. 
+     They are preceded by a backslash (\). For example, \n represents a newline character, and \" represents a double quote within a double-quoted string.
+
+2. What do the escape characters n and t stand for?
+
+ans. * \n: Represents a newline character, causing the text to move to the next line.
+     * \t: Represents a tab character, causing horizontal spacing similar to pressing the Tab key.
+
+3. What is the way to include backslash characters in a string?
+
+ans. To include a literal backslash in a string, you can escape it by using a double backslash (\\).
+
+4. The string "Howl's Moving Castle" is a correct value. Why isn't the single quote character in the
+   word Howl's not escaped a problem?
+
+ans. we can enclose a string in either single quotes (') or double quotes ("). If you use one type of quote to define the string,
+     you can freely use the other type of quote inside the string without escaping. In this case, since the string is enclosed in double quotes,
+	 the single quote within the word "Howl's" doesn't need to be escaped.
+
+5. How do you write a string of newlines if you don't want to use the n character?
+
+ans. use triple-quoted strings to create a multiline string. For example:
+     multiline_string = '''Line 1
+     Line 2
+     Line 3'''
+
+
+6. What are the values of the given expressions?
+
+   'Hello, world!'[1]   - e
+   'Hello, world!'[0:5] - Hello
+   'Hello, world!'[:5]  - Hello
+   'Hello, world!'[3:]  - lo, world!
+
+7. What are the values of the following expressions?
+
+   'Hello'.upper()             - 'HELLO'
+   'Hello'.upper().isupper()   -  True
+   'Hello'.upper().lower()     - 'hello'
+   
+8. What are the values of the following expressions? 'Remember, remember, the fifth of July.'.split()
+'-'.join('There can only one.'.split())
+
+ans. * 'Remember, remember, the fifth of July.'.split() → ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+     * '-'.join('There can only one.'.split()) → 'There-can-only-one.'
+ 
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+
+ans. * Right-justifying: .rjust(width)
+     * Left-justifying: .ljust(width)
+     * Centering: .center(width)
+
+10. What is the best way to remove whitespace characters from the start or end?
+
+ans. TRIM() and strip()

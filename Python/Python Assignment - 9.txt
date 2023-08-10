@@ -1,0 +1,47 @@
+PYTHON ASSIGNMENT - 9
+
+1. To what does a relative path refer?
+
+ans. A relative path refers to the path of a file or directory relative to the current working directory. It does not start from the root directory.
+
+2. What does an absolute path start with your operating system?
+
+ans. An absolute path starts with the root directory of the operating system. In Windows, an absolute path typically starts with a drive letter 
+    (e.g., C:\), while in Unix-based systems, it starts with a forward slash (e.g., /).
+
+
+3. What do the functions os.getcwd() and os.chdir() do?
+
+ans. * os.getcwd(): This function returns the current working directory.
+     * os.chdir(path): This function changes the current working directory to the specified path.
+
+4. What are the . and .. folders?
+
+ans. * '.': The dot represents the current directory.
+     * '..': The double dot represents the parent directory.
+
+5. In C:\bacon\eggs\spam.txt, which part is the dir name, and which part is the base name?
+
+ans. In C:\bacon\eggs\spam.txt, the directory name (dir name) is C:\bacon\eggs, and the base name is spam.txt
+
+6. What are the three “mode” arguments that can be passed to the open() function?
+
+ans.  * 'r': Read mode (default). Opens the file for reading.
+      * 'w': Write mode. Opens the file for writing, truncating the file if it already exists.
+      * 'a': Append mode. Opens the file for writing, but appends to the end if the file exists.
+
+
+7. What happens if an existing file is opened in write mode?
+
+ans. If an existing file is opened in write mode ('w'), the file's contents will be truncated (emptied) before any new data is written.
+     The file is essentially overwritten.
+
+8. How do you tell the difference between read() and readlines()?
+ 
+ans. * read(): Reads the entire contents of the file as a single string.
+     * readlines(): Reads the file line by line and returns a list of strings, where each string represents a line
+
+9. What data structure does a shelf value resemble?
+
+ans. A shelf value in Python resembles a dictionary-like data structure. It's provided by the shelve module and allows you to store 
+     key-value pairs persistently. It behaves like a dictionary but is stored as a binary file on disk.
