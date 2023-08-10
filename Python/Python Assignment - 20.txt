@@ -1,0 +1,114 @@
+PYTHON ASSIGNMENT - 20
+
+1. Set the variable test1 to the string 'This is a test of the emergency text system,' and save test1 to a
+   file named test.txt.
+   
+ans. test1 = 'This is a test of the emergency text system,'
+     with open('test.txt', 'w') as file:
+       file.write(test1)
+
+   
+2. Read the contents of the file test.txt into the variable test2. Is there a difference between test 1 and test 2?
+
+ans. with open('test.txt', 'r') as file:
+       test2 = file.read()
+
+     print(test2)
+     print(test1 == test2)  # Should print True if there is no difference
+
+
+3. Create a CSV file called books.csv by using these lines: title,author,year
+   The Weirdstone of Brisingamen,Alan Garner,1960
+   Perdido Street Station,China Miéville,2000
+   Thud!,Terry Pratchett,2005
+   The Spellman Files,Lisa Lutz,2007
+   Small Gods,Terry Pratchett,1992
+   
+4. Use the sqlite3 module to create a SQLite database called books.db, and a table called books with
+these fields: title (text), author (text), and year (integer).
+
+ans. import sqlite3
+
+     connection = sqlite3.connect('books.db')
+     cursor = connection.cursor()
+
+     cursor.execute('''
+        CREATE TABLE books (
+          title TEXT,
+          author TEXT,
+          year INTEGER
+         )
+    ''')
+
+    connection.commit()
+    connection.close()
+
+
+
+5. Read books.csv and insert its data into the book table.
+
+ans.  import csv
+
+      with open('books.csv', 'r') as file:
+        csv_reader = csv.reader(file)
+        next(csv_reader)  # Skip the header row
+        for row in csv_reader:
+          title, author, year = row
+          connection = sqlite3.connect('books.db')
+          cursor = connection.cursor()
+          cursor.execute('INSERT INTO books (title, author, year) VALUES (?, ?, ?)', (title, author, year))
+          connection.commit()
+          connection.close()
+
+
+6. Select and print the title column from the book table in alphabetical order.
+
+ans. connection = sqlite3.connect('books.db')
+     cursor = connection.cursor()
+     cursor.execute('SELECT title FROM books ORDER BY title')
+     titles = cursor.fetchall()
+     for title in titles:
+        print(title[0])
+     connection.close()
+
+
+7. From the book table, select and print all columns in the order of publication.
+
+ans. connection = sqlite3.connect('books.db')
+     cursor = connection.cursor()
+     cursor.execute('SELECT * FROM books ORDER BY year')
+     books = cursor.fetchall()
+     for book in books:
+        print(book)
+     connection.close()
+
+
+8. Use the sqlalchemy module to connect to the sqlite3 database books.db that you just made in exercise 6.
+
+ans. from sqlalchemy import create_engine
+
+    engine = create_engine('sqlite:///books.db')
+    connection = engine.connect()
+
+
+9. Install the Redis server and the Python redis library (pip install redis) on your computer. Create a
+   Redis hash called test with the fields count (1) and name ('Fester Bestertester'). Print all the fields for
+   test.
+   
+ans. import redis
+
+     redis_client = redis.Redis(host='localhost', port=6379, db=0)
+     redis_client.hset('test', 'count', 1)
+     redis_client.hset('test', 'name', 'Fester Bestertester')
+
+     test_fields = redis_client.hgetall('test')
+     for field, value in test_fields.items():
+        print(f'{field.decode("utf-8")}: {value.decode("utf-8")}')
+
+
+10. Increment the count field of test and print it.
+
+ans. redis_client.hincrby('test', 'count', 1)
+     new_count = redis_client.hget('test', 'count')
+     print(f'Updated count: {new_count.decode("utf-8")}')
+
