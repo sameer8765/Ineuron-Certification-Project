@@ -1,0 +1,56 @@
+PYTHON ASSIGNMENT - 14
+
+1. What does RGBA stand for?
+
+ans. RGBA stands for Red, Green, Blue, and Alpha. It's a color model that represents colors using combinations of red, green, 
+     and blue channels, along with an alpha channel for transparency.
+
+2. From the Pillow module, how do you get the RGBA value of any images?
+
+ans. You can use the getpixel() method to get the RGBA value of a specific pixel in an image. For example:
+     
+	 from PIL import Image
+
+     image = Image.open('image.png')
+     rgba_value = image.getpixel((x, y))  # Replace x and y with the coordinates of the pixel
+
+
+3. What is a box tuple, and how does it work?
+
+ans. A box tuple is a tuple containing four integer values representing the coordinates of a rectangular region. 
+     The four values are (left, upper, right, lower) where (left, upper) is the top-left corner of the box, and (right, lower) 
+	 is the bottom-right corner of the box.
+	 
+4. Use your image and load in notebook then, How can you find out the width and height of an Image object?
+
+ans. You can use the size attribute of the Image object to get its width and height. For example:
+
+     width, height = image.size
+
+
+5. What method would you call to get Image object for a 100×100 image, excluding the lower-left quarter of it?
+
+ans. You can use the crop() method to extract a region of interest from an image. To exclude the lower-left quarter, you would crop
+     it using the appropriate box tuple. For example:
+	 
+	 cropped_image = image.crop((0, 0, width // 2, height // 2))
+
+
+6. After making changes to an Image object, how could you save it as an image file?
+
+ans. You can use the save() method of the Image object to save it as an image file. For example:
+
+     modified_image.save('modified_image.png')
+
+
+7. What module contains Pillow’s shape-drawing code?
+
+ans. Pillow's shape-drawing code is contained within the ImageDraw module.
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind of object?
+
+ans. The ImageDraw object from the ImageDraw module has drawing methods. You can create an ImageDraw object associated with an Image object like this:
+     from PIL import Image, ImageDraw
+
+     image = Image.new('RGB', (width, height))
+     draw = ImageDraw.Draw(image)

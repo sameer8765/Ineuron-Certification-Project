@@ -1,0 +1,70 @@
+PYTHON ASSIGNMENT - 11 
+
+1. Create an assert statement that throws an AssertionError if the variable spam is a negative integer.
+
+ans. assert spam >= 0, "spam cannot be negative"
+
+
+2. Write an assert statement that triggers an AssertionError if the variables eggs and bacon contain
+strings that are the same as each other, even if their cases are different (that is, 'hello' and 'hello' are
+considered the same, and 'goodbye' and 'GOODbye' are also considered the same).
+
+ans. assert eggs.lower() != bacon.lower(), "eggs and bacon should be different"
+
+
+
+3. Create an assert statement that throws an AssertionError every time.
+
+ans. assert False, "This assertion will always fail"
+
+
+
+4. What are the two lines that must be present in your software in order to call logging.debug()?
+
+ans. You need to import the logging module and set the logging level to DEBUG.
+     import logging
+     logging.basicConfig(level=logging.DEBUG)
+
+
+
+5. What are the two lines that your program must have in order to have logging.debug() send a
+logging message to a file named programLog.txt?
+
+ans. You need to configure the logging to write to the file and set the logging level to DEBUG.
+     import logging
+     logging.basicConfig(filename='programLog.txt', level=logging.DEBUG)
+
+
+
+6. What are the five levels of logging?
+
+ans. The five levels of logging, in increasing order of severity, are: DEBUG, INFO, WARNING, ERROR, and CRITICAL.
+
+7. What line of code would you add to your software to disable all logging messages?
+
+ans. To disable all logging messages, you can set the logging level to a higher level, such as WARNING.
+     logging.basicConfig(level=logging.WARNING)
+
+
+
+8.Why is using logging messages better than using print() to display the same message?
+
+ans. Using logging messages provides more control and flexibility compared to print() statements. Logging allows you to specify different 
+     severity levels, control where messages are directed (console, file, etc.), and enables easy filtering and customization of messages
+	 during development and debugging.
+
+
+9. What are the differences between the Step Over, Step In, and Step Out buttons in the debugger?
+
+ans. * Step Over: Executes the current line of code and stops at the next line in the same function.
+     * Step In: If the current line of code contains a function call, it enters the function and stops at the first line of the function.
+     * Step Out: Continues execution until the current function returns, and stops at the line after the function call.
+
+10.After you click Continue, when will the debugger stop ?
+
+ans. The debugger will stop when the program execution completes, reaches an unhandled exception, or encounters a breakpoint.
+
+11. What is the concept of a breakpoint?
+
+ans. A breakpoint is a marker set by a developer in the code to pause program execution at a specific line or function call. 
+     It allows you to inspect variables, step through the code, and analyze the program's behavior at that point in the code.

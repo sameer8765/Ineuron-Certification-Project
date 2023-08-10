@@ -1,0 +1,62 @@
+PYTHON ASSIGNMENT - 15
+
+1.How many seconds are in an hour? Use the interactive interpreter as a calculator and multiply the
+number of seconds in a minute (60) by the number of minutes in an hour (also 60).
+
+ans. 60 seconds in a minute * 60 minutes in an hour = 3600 seconds in an hour.
+
+2. Assign the result from the previous task (seconds in an hour) to a variable called seconds_per_hour.
+
+ans. seconds_per_hour = 3600
+
+
+3. How many seconds do you think there are in a day? Make use of the variables seconds per hour and minutes per hour.
+
+ans. There are 24 hours in a day, so:
+     seconds_per_day = seconds_per_hour * 24 = 3600 * 24 = 86400 seconds in a day.
+
+
+4. Calculate seconds per day again, but this time save the result in a variable called seconds_per_day
+
+ans. seconds_per_day = seconds_per_hour * 24
+
+5. Divide seconds_per_day by seconds_per_hour. Use floating-point (/) division.
+
+ans. result = seconds_per_day / seconds_per_hour
+
+
+6. Divide seconds_per_day by seconds_per_hour, using integer (//) division. Did this number agree
+   with the floating-point value from the previous question, aside from the final .0?
+
+ans. result_int = seconds_per_day // seconds_per_hour
+
+
+7. Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to
+   its next() method: 2, 3, 5, 7, 11, ...
+
+ans. def is_prime(num):
+    if num <= 1:
+        return False
+    if num <= 3:
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def genPrimes():
+    num = 2
+    while True:
+        if is_prime(num):
+            yield num
+        num += 1
+
+primes_generator = genPrimes()
+print(next(primes_generator))  # Output: 2
+print(next(primes_generator))  # Output: 3
+print(next(primes_generator))  # Output: 5
+# ... and so on
