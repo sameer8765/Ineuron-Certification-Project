@@ -1,0 +1,40 @@
+PYTHON ASSIGNMENT - 25
+
+1) What is the difference between enclosing a list comprehension in square brackets and parentheses?
+
+ans.  - When using square brackets `[]` for a list comprehension, it generates a list containing the computed elements.
+      - When using parentheses `()` for a generator expression, it creates a generator object that yields elements on-the-fly
+        as they are needed. 
+
+
+2) What is the relationship between generators and iterators?
+
+ans.  - A generator is a type of iterator in Python. Generators are created using functions with the `yield` keyword, allowing 
+        you to iterate over a sequence of values without storing them in memory all at once.
+      - An iterator is an object that implements the methods `__iter__()` and `__next__()`. Generators automatically implement 
+	    these methods, making them iterable.
+
+
+3) What are the signs that a function is a generator function?
+
+ans.  - A function becomes a generator function when it contains one or more `yield` statements.
+      - The presence of a `yield` statement indicates that the function will not execute completely when called,
+    	  but will produce a generator object that can be iterated over.
+		  
+4) What is the purpose of a yield statement?
+
+ans. - The `yield` statement is used within a generator function to produce a value and pause the function's execution temporarily.
+     - It allows the generator to produce values one at a time, as opposed to returning an entire list or sequence at once.
+     - The generator state is saved, and when the generator is iterated over again, it resumes execution from where it was paused.
+
+
+5) What is the relationship between map calls and list comprehensions? Make a comparison and contrast between the two.
+
+ans.  - Both `map` calls and list comprehensions are used to transform and process elements of an iterable.
+      - `map` applies a given function to each element of an iterable and returns an iterable containing the results.
+      - List comprehensions generate a new list by applying an expression to each element of an iterable.
+      - List comprehensions can include conditions for filtering elements, while `map` does not inherently support conditions.
+      - List comprehensions are often more readable and concise, while `map` might be used when a function needs to be applied to 
+	    multiple iterables.
+
+

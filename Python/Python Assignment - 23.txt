@@ -1,0 +1,98 @@
+PYTHON ASSIGNMENT - 23
+
+
+1. What is the result of the code, and why?
+   def func(a, b=6, c=8):
+   print(a, b, c)
+   func(1, 2)
+   
+ans.  Result: This code will print `1 2 8`.
+
+      Explanation: The function `func` is defined with three parameters: `a`, `b`, and `c`. When calling the function with `func(1, 2)`, 
+	               `a` is assigned the value `1`, `b` is assigned the value `2`, and since `c` is not provided as an argument, it takes the default value of `8`.
+	                Thus, the output is `1 2 8`.
+
+2. What is the result of this code, and why?
+   def func(a, b, c=5):
+   print(a, b, c)
+   func(1, c=3, b=2)
+   
+ans. Result: This code will print `1 2 3`.
+
+     Explanation: In this case, when calling the function with `func(1, c=3, b=2)`, `a` is assigned `1`, `b` is explicitly assigned `2`, 
+	              and `c` is explicitly assigned `3`, overriding its default value of `5`.
+
+
+3. How about this code: what is its result, and why?
+   def func(a, *pargs):
+   print(a, pargs)
+   func(1, 2, 3)
+   
+ans. Result: This code will print `1 (2, 3)`.
+
+     Explanation: The parameter `*pargs` in the function definition collects any extra positional arguments into a tuple named `pargs`.
+               	  When calling the function with `func(1, 2, 3)`, `a` is assigned `1`, and the additional arguments `2` and `3` are collected 
+				  into the tuple `pargs`.
+
+
+4. What does this code print, and why?
+   def func(a, kargs):
+   print(a, kargs)
+   func(a=1, c=3, b=2)
+   
+ans. Result: This code will print `1 {'c': 3, 'b': 2}`.
+
+     Explanation: The parameter `kargs` in the function definition collects any extra keyword arguments into a dictionary named `kargs`. 
+	              When calling the function with `func(a=1, c=3, b=2)`, `a` is assigned `1`, and the keyword arguments `c` and `b` are collected 
+				  into the dictionary `kargs`.
+
+
+5. What gets printed by this, and explain?
+   def func(a, b, c=8, d=5): print(a, b, c, d)
+   func(1, *(5, 6))
+   
+ans. Result: This code will print `1 5 6 5`.
+
+     Explanation: The function is called with `func(1, *(5, 6))`. The `*` operator unpacks the tuple `(5, 6)` into separate arguments.
+                  So, `a` is assigned `1`, `b` is assigned `5`, and `c` and `d` retain their default values.
+
+
+6. what is the result of this, and explain?
+   def func(a, b, c): a = 2; b[0] = 'x'; c['a'] = 'y'
+   l=1; m=[1]; n={'a':0}
+   func(l, m, n)
+
+   l, m, n
+   
+ans. Result: This code will print `1 ['x'] {'a': 'y'}` followed by `1 ['x'] {'a': 'y'}`.
+
+     Explanation: The function `func` modifies the values of its arguments. Since lists and dictionaries are mutable, changes made to 
+	              them inside the function affect the original objects outside the function. Hence, after calling `func(l, m, n)`, `l` 
+				  remains unchanged, but `m` becomes `['x']` and `n` becomes `{'a': 'y'}`.
+
+     The `print(l, m, n)` statement outside the function also reflects the changes made by `func`, so it will print the same values: `1 ['x'] {'a': 'y'}`.
+
+
+
+
+
+
+  
+
+
+
+   
+
+
+   
+
+
+
+   
+
+
+   
+
+
+
+   
